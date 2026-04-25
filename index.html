@@ -220,6 +220,8 @@ footer p{margin:4px 0}
 .emec-qr-header{display:flex;align-items:center;justify-content:center;gap:6px;font-size:15px;color:#1a3a8f;font-weight:700;margin-bottom:8px}
 .emec-qr-box img{margin:0 auto;border-radius:4px}
 .emec-label{font-size:12px;font-weight:700;color:#1a3a8f;margin-top:8px;letter-spacing:.5px}
+.emec-qr-link{display:block;text-decoration:none;color:inherit;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+.emec-qr-link:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,58,143,.18)}
 .emec-qr-text p{font-size:16px;color:#1a3a8f;line-height:1.5;max-width:200px}
 
 /* RESPONSIVE */
@@ -371,13 +373,13 @@ section{padding:100px 0}
         </div>
       </div>
       <div class="emec-qr">
-        <div class="emec-qr-box">
+        <a href="https://emec.mec.gov.br/emec/consulta-cadastro/detalhamento/d96957f455f6405d14c6542552b0f6eb/NDA5Mw==" target="_blank" rel="noopener noreferrer" class="emec-qr-box emec-qr-link">
           <div class="emec-qr-header">
             <span class="emec-icon">🏛️</span> <strong>e-MEC</strong>
           </div>
           <img src="https://saberconscienteinstituto.com/wp-content/uploads/2024/10/qrmec.png" alt="QR Code e-MEC" loading="lazy" width="110" height="110">
           <p class="emec-label">ACESSE JÁ!</p>
-        </div>
+        </a>
         <div class="emec-qr-text">
           <p><strong>Consulte aqui<br>o cadastro da Instituição<br>no Sistema e-MEC</strong></p>
         </div>
