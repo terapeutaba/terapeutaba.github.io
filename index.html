@@ -180,10 +180,52 @@ section{padding:80px 0;position:relative}
 footer{background:#070f1d;padding:32px 20px;text-align:center;color:#64748b;font-size:13px;border-top:1px solid rgba(255,255,255,.05)}
 footer p{margin:4px 0}
 
+/* CERT GRID 2-col override */
+.cert-grid-2{grid-template-columns:1fr!important;max-width:780px;margin-left:auto;margin-right:auto}
+@media(min-width:600px){.cert-grid-2{grid-template-columns:repeat(2,1fr)!important}}
+.cert-grid-2 .cert-item{max-width:100%}
+.cert-grid-2 .cert-img-wrap{aspect-ratio:16/11}
+
+/* SPECIAL CONDITION */
+.special-condition{background:#0a1628;padding:80px 0}
+.special-inner{display:flex;flex-direction:column;align-items:center;gap:40px;text-align:center}
+.special-pretitle{font-size:22px;font-weight:800;color:#fff;margin-bottom:6px}
+.special-title{font-size:clamp(28px,5vw,44px);font-weight:900;color:#fff;letter-spacing:-1px;line-height:1.15;margin-bottom:16px}
+.special-title .accent{color:#e85d04}
+.special-divider{width:80px;height:3px;background:#e85d04;margin:0 auto 24px}
+.special-desc{font-size:17px;color:#94a3b8;max-width:560px;line-height:1.7;margin:0 auto}
+.special-desc strong{color:#fff}
+.special-img-wrap{max-width:420px;width:100%}
+.special-img-wrap img{width:100%;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+@media(min-width:900px){
+  .special-inner{flex-direction:row;text-align:left;gap:60px;align-items:center}
+  .special-text{flex:1}
+  .special-divider{margin:0 0 24px}
+  .special-desc{margin:0}
+  .special-img-wrap{flex:0 0 420px}
+}
+
+/* e-MEC SECTION */
+.emec-section{background:#fff;padding:40px 0;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb}
+.emec-inner{display:flex;flex-direction:column;align-items:center;gap:32px}
+@media(min-width:640px){.emec-inner{flex-direction:row;justify-content:center;gap:48px}}
+.emec-logos{display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:center}
+.saber-badge{width:90px;height:90px;border-radius:50%;background:#1a3a8f;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px;border:3px solid #d4af37}
+.saber-text{color:#fff;font-size:11px;font-weight:800;letter-spacing:.5px;line-height:1.4;text-transform:uppercase}
+.unifatec-text{font-size:30px;font-weight:300;color:#1a3a8f;letter-spacing:-1px;line-height:1}
+.unifatec-text strong{font-weight:800}
+.unifatec-sub{display:block;font-size:10px;color:#1a3a8f;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+.emec-qr{display:flex;align-items:center;gap:20px}
+.emec-qr-box{border:2px solid #1a3a8f;border-radius:10px;padding:12px;text-align:center;background:#f8faff;min-width:150px}
+.emec-qr-header{display:flex;align-items:center;justify-content:center;gap:6px;font-size:15px;color:#1a3a8f;font-weight:700;margin-bottom:8px}
+.emec-qr-box img{margin:0 auto;border-radius:4px}
+.emec-label{font-size:12px;font-weight:700;color:#1a3a8f;margin-top:8px;letter-spacing:.5px}
+.emec-qr-text p{font-size:16px;color:#1a3a8f;line-height:1.5;max-width:200px}
+
 /* RESPONSIVE */
 @media (min-width:768px){
 .grid-3{grid-template-columns:repeat(2,1fr)}
-.cert-grid{grid-template-columns:repeat(3,1fr)}
+.cert-grid{grid-template-columns:repeat(2,1fr)}
 .modules{grid-template-columns:repeat(2,1fr)}
 }
 @media (min-width:992px){
@@ -279,24 +321,66 @@ section{padding:100px 0}
   <div class="container">
     <h2 class="section-title">Conquiste <span class="accent">Dois Certificados</span> Reconhecidos</h2>
     <p class="section-subtitle">Ao concluir o curso, você receberá certificados com validade nacional e profissional</p>
-    <div class="cert-grid">
+    <div class="cert-grid cert-grid-2">
       <div class="cert-item">
         <div class="cert-img-wrap">
-          <img src="https://saberconscienteinstituto.com/wp-content/uploads/2024/09/certificado-unifatec.webp" alt="Certificado Unifatec MEC 150h" loading="lazy" onerror="this.style.display='none';this.parentNode.innerHTML='&lt;div class=&quot;cert-fallback&quot;&gt;&lt;strong&gt;Certificado&lt;/strong&gt;&lt;span&gt;UNIFATEC · MEC&lt;/span&gt;&lt;span&gt;150 horas&lt;/span&gt;&lt;/div&gt;'">
+          <img src="https://saberconscienteinstituto.com/wp-content/uploads/2024/11/certif-aba.png" alt="Certificado Unifatec MEC 150h" loading="lazy" onerror="this.style.display='none';this.parentNode.innerHTML='&lt;div class=&quot;cert-fallback&quot;&gt;&lt;strong&gt;Certificado&lt;/strong&gt;&lt;span&gt;UNIFATEC · MEC&lt;/span&gt;&lt;span&gt;150 horas&lt;/span&gt;&lt;/div&gt;'">
         </div>
         <div class="cert-caption">Certificado Unifatec MEC<small>150 horas</small></div>
       </div>
       <div class="cert-item">
         <div class="cert-img-wrap">
-          <img src="https://saberconscienteinstituto.com/wp-content/uploads/2024/09/certificado-ath.webp" alt="Certificado Profissional ABA 450h" loading="lazy" onerror="this.style.display='none';this.parentNode.innerHTML='&lt;div class=&quot;cert-fallback&quot;&gt;&lt;strong&gt;Certificado Profissional&lt;/strong&gt;&lt;span&gt;Terapeuta ABA&lt;/span&gt;&lt;span&gt;450 horas&lt;/span&gt;&lt;/div&gt;'">
+          <img src="https://saberconscienteinstituto.com/wp-content/uploads/2026/01/certificado-extensao-aba.png" alt="Certificado Profissional ABA 450h" loading="lazy" onerror="this.style.display='none';this.parentNode.innerHTML='&lt;div class=&quot;cert-fallback&quot;&gt;&lt;strong&gt;Certificado Profissional&lt;/strong&gt;&lt;span&gt;Terapeuta ABA&lt;/span&gt;&lt;span&gt;450 horas&lt;/span&gt;&lt;/div&gt;'">
         </div>
         <div class="cert-caption">Certificado Profissional ABA<small>450 horas</small></div>
       </div>
-      <div class="cert-item">
-        <div class="cert-img-wrap">
-          <img src="https://saberconscienteinstituto.com/wp-content/uploads/2024/09/carteira-terapeuta.webp" alt="Carteira Profissional de Terapeuta" loading="lazy" onerror="this.style.display='none';this.parentNode.innerHTML='&lt;div class=&quot;cert-fallback&quot;&gt;&lt;strong&gt;Carteira&lt;/strong&gt;&lt;span&gt;Profissional&lt;/span&gt;&lt;span&gt;Terapeuta ABA&lt;/span&gt;&lt;/div&gt;'">
+    </div>
+  </div>
+</section>
+
+<!-- 6b. CONDIÇÃO ESPECIAL POR TEMPO LIMITADO -->
+<section class="special-condition">
+  <div class="container">
+    <div class="special-inner">
+      <div class="special-text">
+        <p class="special-pretitle">Condição Especial</p>
+        <h2 class="special-title">Por Tempo <span class="accent">Limitado</span></h2>
+        <div class="special-divider"></div>
+        <p class="special-desc">Todos os alunos que se inscreverem para essa nova turma, além do certificado, também terão direito à <strong>Carteira com Registro Profissional de Terapeuta</strong> emitida pela Associação dos Terapeutas ATH.</p>
+      </div>
+      <div class="special-img-wrap">
+        <img src="https://saberconscienteinstituto.com/wp-content/uploads/2024/11/carteira-aba.png" alt="Carteira Profissional de Terapeuta ABA" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6c. e-MEC -->
+<section class="emec-section">
+  <div class="container">
+    <div class="emec-inner">
+      <div class="emec-logos">
+        <div class="emec-logo-saber">
+          <div class="saber-badge">
+            <span class="saber-text">SABER<br>CONSCIENTE</span>
+          </div>
         </div>
-        <div class="cert-caption">Carteira Profissional<small>Terapeuta ABA</small></div>
+        <div class="emec-logo-uni">
+          <span class="unifatec-text">uni<strong>fatec</strong></span>
+          <small class="unifatec-sub">CENTRO UNIVERSITÁRIO</small>
+        </div>
+      </div>
+      <div class="emec-qr">
+        <div class="emec-qr-box">
+          <div class="emec-qr-header">
+            <span class="emec-icon">🏛️</span> <strong>e-MEC</strong>
+          </div>
+          <img src="https://saberconscienteinstituto.com/wp-content/uploads/2024/10/qrmec.png" alt="QR Code e-MEC" loading="lazy" width="110" height="110">
+          <p class="emec-label">ACESSE JÁ!</p>
+        </div>
+        <div class="emec-qr-text">
+          <p><strong>Consulte aqui<br>o cadastro da Instituição<br>no Sistema e-MEC</strong></p>
+        </div>
       </div>
     </div>
   </div>
@@ -440,6 +524,14 @@ document.querySelectorAll('.faq-q').forEach(btn=>{
     btn.parentElement.classList.toggle('open');
   });
 });
+// Fix nav top dynamically so it never sits behind the urgency bar on any screen size
+function fixNavTop(){
+  var bar=document.querySelector('.urgency-bar');
+  var nav=document.querySelector('.nav');
+  if(bar&&nav){nav.style.top=bar.offsetHeight+'px';}
+}
+fixNavTop();
+window.addEventListener('resize',fixNavTop);
 </script>
 
 </body>
